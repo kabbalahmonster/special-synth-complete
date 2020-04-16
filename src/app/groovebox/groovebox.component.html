@@ -1,0 +1,37 @@
+<ion-row class="fz-container">
+    <ion-col size="12">
+        <ion-button (click)="playPolyNote('c4')" expand="block" fill="clear" shape="round">
+            Play Note
+        </ion-button>
+        <ion-button (click)="togglePattern()" expand="block" fill="clear" shape="round">
+            Toggle Pattern
+        </ion-button>
+        <ion-button (click)="toggleLoop()" expand="block" fill="clear" shape="round">
+            Toggle Drum Loop
+        </ion-button>
+        <ion-label>Filter Cut-Off</ion-label>
+        <ion-range min="0" max="1000" pin="true" snaps="true" step="1" ticks="true" value="0" color="primary" (ionChange)="updateFilter()" [(ngModel)]="this.filterFrequency">
+        </ion-range>
+
+        <!----------------------  CHALLENGE INPUTS ------------------------------>
+        <ion-label>BPM</ion-label>
+        <ion-range min="0" max="240" pin="true" snaps="true" step="1" ticks="true" value="0" color="primary" (ionChange)="updateBpm()" [(ngModel)]="this.masterBpm">
+        </ion-range>
+
+        <ion-label>Phaser Frequency</ion-label>
+        <ion-range min="0" max="440" pin="true" snaps="true" step="1" ticks="true" value="0" color="primary" (ionChange)="updatePhaser()" [(ngModel)]="this.phaserFreq">
+        </ion-range>
+
+        <ion-label>Phaser Base Frequency</ion-label>
+        <ion-range min="0" max="1000" pin="true" snaps="true" step="1" ticks="true" value="0" color="primary" (ionChange)="updatePhaser()" [(ngModel)]="this.phaserBase">
+        </ion-range>
+
+        <ion-label>Phaser Q</ion-label>
+        <ion-range min="0" max="12" pin="true" snaps="true" step="0.01" ticks="true" value="0" color="primary" (ionChange)="updatePhaser()" [(ngModel)]="this.phaserQ">
+        </ion-range>
+
+        <ion-label>Phaser Octaves</ion-label>
+        <ion-range min="0" max="12" pin="true" snaps="true" step="1" ticks="true" value="0" color="primary" (ionChange)="updatePhaser()" [(ngModel)]="this.phaserOct">
+        </ion-range>
+    </ion-col>
+</ion-row>

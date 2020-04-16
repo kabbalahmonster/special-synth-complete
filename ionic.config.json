@@ -1,0 +1,7 @@
+{
+  "name": "MySpecialSynth",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
